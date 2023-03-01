@@ -1,27 +1,27 @@
-# Programa para saber el valor de la llamada
+	# ecuaciones cuadraticas
+import math 
+## input
+a=int(input("digite el valor de a: "))
+b=int(input("digite el valor de b: "))
+c=int(input("digite el valor de b: "))
 
-print("------------------------------------------")
-print("---El resultado de las operaciones son:---")
-print("------------------------------------------")
+#processing
+
+d=(b**2 -4*a*c)
+
+if d==0:
+    x1= -b/(2*a)
+    x2=x1
+    print (x1, x2)
+    print("son raices iguales")
+
+if d>0:
+    x1= (-b+math.sqrt(d))/2*a
+    x2= (-b-math.sqrt(d))/2*a
+    print (x1, x2)
+    print("son raices diferentes")
+
+else:
+    print("son raices imaginarias")
 
 
-# input
-
-minutos = int(input("ingrese los minutos de la llamada: "))
-
-# procesing
-
-if minutos < 3:
-    costo = 300
-
-else: 
-    costo = (minutos * 50 ) + 300 - 150
-
-
-
-
-# output
-print("-----------------------------------------")
-print("---------------RESULTADOS----------------")
-print("-----------------------------------------")
-print("El costo de la llamada es de: " + str (costo))
